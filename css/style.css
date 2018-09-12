@@ -1,0 +1,670 @@
+
+/* http://meyerweb.com/eric/tools/css/reset
+	padding: 0;
+	border: 0;
+	font-size: 100%;/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Box sizing */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* typo */
+
+@font-face {
+    font-family: "Electro";
+    src: url(../font/Electro\ Shackle.otf);
+}
+
+@font-face {
+    font-family: "Electrolize";
+    src: url(../font/Electrolize.ttf);
+}
+
+body{
+    font-size: 3rem;
+    font-family: "Electro";
+    color: white;
+   
+}
+
+a
+{
+color: #1F1F1F;
+text-decoration: none;
+
+}
+
+
+
+li{
+
+    font-size: 3rem;
+}
+
+
+h1{
+  font-size: 3rem;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}
+
+h2{
+  font-size: 2rem;
+  margin-top: 5vh;
+
+}
+
+li h2 {
+  margin-top:0;
+
+}
+
+h3{
+  font-size: 3rem;
+  font-family: "Electrolize";
+
+}
+
+
+p{
+  margin-top: 4vh;
+  font-size: 1rem;
+
+
+}
+
+/*=== layout===*/
+body{
+    
+    background-color: #377389; 
+
+}
+
+
+#fullpage
+{
+
+height: 100vh;
+overflow: hidden;
+margin:auto;
+
+}
+
+
+
+
+
+  /* header */
+
+  header{
+    background-color:#202020; 
+  }
+
+  #logo{
+    width: 100%;
+    height:100%;
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+
+  #logo img{
+    max-width:100%;
+  }
+
+
+/*nav*/
+.page-section1{
+
+  background-image: url(/images/adventure-backpack-clouds-1390850.jpg);
+  background-size: cover;
+}
+
+  nav {
+    width:100%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+
+#hamburger, #hamburger-content {
+  display: inline;
+  
+}
+
+
+#hamburger-sidebar-body li:first-child:before {
+    background-image: url(../images/envelope.png);
+    background-size: cover;
+}
+#hamburger-sidebar-body li:nth-child(2):before {
+  background-image: url(../images/portfolio.png);
+}
+#hamburger-sidebar-body li:nth-child(3):before {
+   background-image: url(../images/male.png);
+    background-size: cover;
+    background-position: top;
+}
+
+
+
+
+#hamburger-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 60px;
+  vertical-align: top;
+  padding: 0;
+  line-height: 47px;
+  float: right;
+  margin-right: 32px;
+  margin-top: 30px;
+
+}
+
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 84%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:#202020;   
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform .2s ease-out;
+}
+#hamburger-sidebar li {
+  display: block;
+}
+
+
+
+#hamburger-sidebar-header{
+  background-image: url(../images/wallaper.jpg) ;
+
+  height: 128px;
+}
+
+
+
+
+#hamburger-sidebar-body{
+  padding: 16px 8px;
+}
+
+
+
+#hamburger-sidebar-body li:before{
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+#hamburger-sidebar-body .button{
+ 
+  text-align: center;
+  float: none;
+  display: block;
+  height: auto;
+  line-height: inherit;
+  
+}
+
+
+
+
+
+
+
+
+/*figure*/
+
+
+.blockImage{
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.blockImage img{
+  width: 30%;
+  min-width: 350px;
+  max-width: 500px ;
+
+}
+
+.blockImage span{
+  position: absolute;
+  text-align: center;
+}
+
+
+/*portfolio*/
+
+#portfolio{
+width: 100%;
+height:800px ;
+background-color: #EBE2E7;
+text-align: center;
+padding-top: 50px;
+
+
+
+}
+
+
+#portfolio h2{
+
+
+
+ border: 0.4rem solid  #202020;
+ border-radius: 7rem;
+ padding: 10px;
+ 
+
+
+ 
+}
+
+#portfolio h2{
+display: inline;
+
+}
+
+
+#photo{
+
+max-width:1300px;
+
+margin:auto;
+margin-top: 150px;
+
+display:grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1fr;
+grid-gap: 10px;
+
+
+}
+
+
+
+#photo img{
+width: 100%;
+
+}
+
+.p1,.p2, .p3,.p5, .p6, .p7, .p4{
+
+  grid-column: auto;
+  grid-row: auto;
+
+}
+
+
+
+
+
+
+
+
+/*footer*/
+
+
+footer{
+
+  padding-top: 50px;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url(/images/rotary-691528_1280.jpg);
+  
+  background-position: top;
+
+}
+
+
+footer h2{
+  border: 0.4rem solid #202020;
+  border-radius: 7rem;
+  padding: 10px;
+ }
+
+
+
+ 
+footer h2{
+ display: inline;
+ 
+ }
+
+ .contacte{
+  
+  height: 50%;
+ }
+ 
+.lien{
+height: 50%;
+width: 100%;
+padding-top:50px ;
+background-color: #202020;
+justify-content: center;
+align-items: center;
+
+}
+.lien img{
+  width:100%;
+  height: auto;
+  padding: 2vh;
+  max-width:100px;
+}
+
+
+.numero h3, .numero p {
+
+font-size: 1.5rem;
+}
+
+
+.numero {
+background-color: #202020;
+padding: 10px;
+margin-bottom: 20px;
+border: #C4C4C4 solid;
+
+}
+
+
+ .lien button{
+  cursor: pointer;
+  background-color: #202020;
+  border: none;
+} 
+
+     
+
+
+
+.mail{
+  font-family: "Electrolize";
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+
+
+
+
+    
+    .page-section1{
+
+      background-image: url(images/cornestablette.png);
+      background-repeat: no-repeat;
+      background-position: center bottom  ; 
+    
+    
+    }
+
+  
+
+    footer{
+      
+      background-repeat: no-repeat;
+      background-size: 300% ;
+      background-position-x: 52%;
+    }
+   
+
+}
+
+@media screen and (max-width:768px){
+ 
+
+
+  #photo{
+    height: 100vh;
+    max-width:450px;
+    margin-top: 200px;
+   
+
+    display:grid;
+ 
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 10px;
+    
+ 
+  }
+
+
+
+
+
+
+
+  ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      align-items: flex-start;
+  }
+    
+  
+    #hamburger-content {
+        display: none;
+     
+    }
+  
+    #hamburger-button, #hamburger-sidebar,
+    .hamburger-activated #hamburger-overlay {
+        display: block;
+    }
+  
+  
+    .hamburger-activated #hamburger-sidebar {
+        transform: translateX(0);
+  
+    }
+  
+    #hamburger-sidebar li {
+      display: flex;
+      flex-direction: row;
+      padding: 15px;
+  
+    }
+    .page-section1{
+
+      background-image: url(images/cornestablette.png);
+      background-repeat: no-repeat;
+      background-position: center bottom  ; 
+    
+    
+    }
+    footer{
+      background-image: url(images/bas.png);
+      background-repeat: no-repeat;
+      background-size: 300% ;
+      background-position-x: 52%;
+    }
+
+  
+  }
+
+
+
+
+
+
+  
+@media screen and (max-width:604px) {
+
+
+
+  body{
+    width: 100%;
+    height: 100;
+
+  }
+
+
+
+  #photo{
+    height: 100vh;
+    max-width:150px;
+    margin-top: 100px;
+   
+
+    display:grid;
+ 
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(8,1fr);
+    grid-gap: 10px;
+    
+ 
+  }
+
+
+
+
+
+
+
+
+ figure{
+  overflow: hidden;
+
+ }
+
+#logo {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.lien img {
+  width: 100%;
+  height: auto;
+  padding: 2vh;
+  max-width: 70px;
+}
+
+
+
+#logo img{
+
+  max-width:100%;
+
+}
+.page-section1{
+
+  background-image: url(images/cornestablette.png);
+  background-repeat: no-repeat;
+  background-position: center bottom  ; 
+
+
+}
+footer{
+  background-image: url(images/bas.png);
+  background-repeat: no-repeat;
+  background-size: 300% ;
+  background-position-x: 52%;
+}
+
+}

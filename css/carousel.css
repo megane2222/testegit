@@ -1,0 +1,31 @@
+#carousel{
+  border:red solid 5px;  
+  width: 712px ;
+  height: 264px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:712px;
+    height:264px;
+
+}
+
+
+.navigation{
+position: absolute;
+bottom:px;
+right: 5px;
+}
+
+.navigation span {
+
+background: #000;
+color: #ffffff;
+
+}
+
